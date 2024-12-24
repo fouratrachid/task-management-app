@@ -16,16 +16,18 @@ export async function signIn(credentials: AuthCredentialsDto) {
 
   return response.json();
 }
-
 export async function signUp(credentials: AuthCredentialsDto) {
   const response = await fetch(`${API_URL}/auth/signup`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(credentials),
   });
-
+  if (response.status === 201) {
+    console.log('Sign Up Successful');
+    return {} ; 
+  }
   if (!response.ok) {
-    const error = await response.json();
+    const error = await response.json();    
     throw new Error(error.message || 'Failed to sign up');
   }
 
