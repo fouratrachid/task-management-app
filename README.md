@@ -164,6 +164,7 @@ The application uses PostgreSQL with the following main tables:
 
   ```bash
   # Frontend tests
+  cd frontend
   npm test
 
   # Backend tests
