@@ -34,7 +34,7 @@ A modern task management application built with Next.js, TypeScript, and Postgre
 
 - **Frontend**
 
-  - Next.js 13 (App Router)
+  - Next.js 13
   - TypeScript
   - Tailwind CSS
   - shadcn/ui components
@@ -102,6 +102,7 @@ A modern task management application built with Next.js, TypeScript, and Postgre
    Frontend:
 
    ```bash
+   cd frontend
    npm run dev
    ```
 
@@ -117,19 +118,21 @@ A modern task management application built with Next.js, TypeScript, and Postgre
 ## Project Structure
 
 ```
-├── app/                    # Next.js app directory
-│   ├── api/               # API client functions
-│   ├── components/        # React components
-│   ├── hooks/            # Custom React hooks
-│   ├── providers/        # Context providers
-│   ├── types/            # TypeScript types
-│   └── page.tsx          # Main page component
+├── frontened/
+│   ├── app/                    # Next.js app directory
+│   │   ├── api/               # API client functions
+│   │   ├── components/        # React components
+│   │   ├── hooks/            # Custom React hooks
+│   │   ├── providers/        # Context providers
+│   │   ├── types/            # TypeScript types
+│   │   └── page.tsx          # Main page component
+│   └── components/          # shadcn/ui components
 ├── backend/              # NestJS backend
 │   ├── src/
 │   │   ├── auth/        # Authentication module
 │   │   ├── tasks/       # Tasks module
 │   │   └── main.ts      # Application entry
-└── components/          # shadcn/ui components
+└   └
 ```
 
 ## API Documentation
