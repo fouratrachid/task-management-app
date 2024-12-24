@@ -1,11 +1,13 @@
+export type TaskStatus = 'TODO' | 'IN_PROGRESS' | 'DONE';
+
 export interface Task {
   id: string;
   title: string;
   description: string;
-  status: 'TODO' | 'IN_PROGRESS' | 'DONE';
+  status: TaskStatus;
   createdAt: Date;
   updatedAt: Date;
-  userId: string; // Add userId field
+  userId: string;
 }
 
 export type CreateTaskDTO = Omit<Task, 'id' | 'createdAt' | 'updatedAt' | 'userId'>;
